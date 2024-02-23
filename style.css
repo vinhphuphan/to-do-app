@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body {
+    box-sizing: border-box;
+    margin : 0;
+    padding : 0;
+    border : 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    background: #ffffff;
+    width: 100%;
+    max-width: 540px;
+    min-height: 30vh;
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+.title {
+    color : #002765;
+    display: flex;
+    align-items: center;
+    gap : 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: semibold;
+    justify-content: center;
+}
+
+.title img {
+    width: 2rem;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background : #edeef0;
+    border-radius: 2rem;
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+input {
+    flex : 1;
+    border : none;
+    outline : none;
+    background: transparent;
+    padding : 1rem;
+    font-weight: 14px;
+    font-family: "Poppins";
+}
+
+button {
+    border : none;
+    outline : none;
+    padding : 1rem 3rem;
+    background:  #ff5945;
+    color : #fff;
+    font-size: 1rem;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    font-family: "Poppins";
+    transition : 300ms all ease;
+}
+
+button:hover {
+    opacity: 80%;
+}
+
+ul {
+    padding-left: 0;
+}
+
+ul li {
+    list-style: none;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding : 1rem;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding-left: 3.5rem;
+    font-family: "Poppins";
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-image: url("./images/unchecked.png");
+    background-position: center;
+    background-size: cover;
+    top : 16px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url("./images/checked.png");
+}
+
+.delete-btn {
+    position: absolute;
+    right: 0;
+    top : 5px;
+    height: 2rem;
+    width: 2rem;
+    font-size: normal;
+    color : #555;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 50%;
+    transition: 300ms all ease;
+}
+.delete-btn:hover {
+    background: #edeef0;
+}
+
