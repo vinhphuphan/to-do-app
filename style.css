@@ -84,40 +84,36 @@ ul {
 ul li {
     list-style: none;
     font-size: 1rem;
-    padding : 1rem;
+    padding : 1rem 0;
     cursor: pointer;
     user-select: none;
     position: relative;
-    padding-left: 3.5rem;
     font-family: "Poppins";
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-ul li::before {
-    content: "";
-    position: absolute;
-    height: 1.5rem;
+ul li img {
     width: 1.5rem;
-    border-radius: 50%;
-    background-image: url("./images/unchecked.png");
-    background-position: center;
-    background-size: cover;
-    top : 16px;
-    left: 8px;
+    height: 1.5rem;
 }
 
-ul li.checked {
+.task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    text-wrap: wrap;
+    gap : 1.2rem;
+}
+
+.task.checked {
     color: #555;
     text-decoration: line-through;
 }
 
-ul li.checked::before {
-    background-image: url("./images/checked.png");
-}
-
 .delete-btn {
-    position: absolute;
-    right: 0;
-    top : 5px;
     height: 2rem;
     width: 2rem;
     font-size: normal;
@@ -127,8 +123,10 @@ ul li.checked::before {
     text-align: center;
     border-radius: 50%;
     transition: 300ms all ease;
+    margin-left: 1rem;
+   
 }
+
 .delete-btn:hover {
     background: #edeef0;
 }
-
